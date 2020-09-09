@@ -1,0 +1,17 @@
+﻿<Window x:Class="FirstWPFApplication.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FirstWPFApplication"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Background="#FF2789EC">
+        <Label Content="HELLO" HorizontalAlignment="Left" Margin="322,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="2.076,1.552" Height="72" Width="182" FontWeight="Bold" Background="#FF2789EC" Foreground="#FFFFF8F8" FontSize="48"/>
+        <Label Content="Enter your Birthdate:" HorizontalAlignment="Left" Margin="54,239,0,0" VerticalAlignment="Top" Width="233" Height="54" FontSize="24"/>
+        <TextBox x:Name="txtBday" HorizontalAlignment="Left" Height="55" Margin="287,238,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="127"/>
+        <Label Content="Enter your Name:" HorizontalAlignment="Left" Margin="54,144,0,0" VerticalAlignment="Top" Width="194" Height="54" FontSize="24"/>
+        <TextBox x:Name="txtName" HorizontalAlignment="Left" Height="55" Margin="253,144,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="127"/>
+        <Button x:Name="btnGo" Content="Go!" HorizontalAlignment="Left" Margin="511,300,0,0" VerticalAlignment="Top" Width="193" Height="83" FontSize="36" FontWeight="Bold" Click="Button_Click" MouseEnter="btnGo_MouseEnter"/>
+    </Grid>
+</Window>
