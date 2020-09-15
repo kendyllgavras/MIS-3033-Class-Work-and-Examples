@@ -30,8 +30,8 @@ namespace WPFClasses
 
         public override string ToString()
         {
-            string message = "Name:" + Name + "Address:" + Address + "ZipCode:" + ZipCode + ".";
-            return base.ToString(message);
+            
+            return base.ToString() + "Name:" + Name + "Address:" + Address + "ZipCode:" + ZipCode + ".";
         }
 
 
