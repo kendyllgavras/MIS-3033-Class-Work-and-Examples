@@ -31,7 +31,7 @@ namespace WPFClasses
         public override string ToString()
         {
             
-            return base.ToString() + "Name:" + Name + "Address:" + Address + "ZipCode:" + ZipCode + ".";
+            return base.ToString() + "Name:" + Name.ToString() + "Address:" + Address.ToString() + "ZipCode:" + ZipCode.ToString() + ".";
         }
 
 

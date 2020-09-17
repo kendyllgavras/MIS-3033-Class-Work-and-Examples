@@ -24,5 +24,34 @@ namespace WPFClasses
         {
             InitializeComponent();
         }
+
+        private void listbox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+               
+        }
+
+        private void btnapplication_Click(object sender, RoutedEventArgs e)
+        {   
+            EntryForm Userentry=new EntryForm();
+            Userentry.Name = txtname.Text;
+            Userentry.Address = txtzipcode.Text;
+
+
+            ListBox ListBox1 = new ListBox();
+            
+            txtname.Text = "";
+            txtaddress.Text = "";
+            txtzipcode.Text = "";
+
+            ListBox1.Items.Add(Userentry);
+          
+        }
+
+        private void addbtn_Click(object sender, RoutedEventArgs e)
+        {
+            txtname.Clear();
+            txtaddress.Clear();
+            txtzipcode.Clear();
+        }
     }
 }
