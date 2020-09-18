@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WPFClasses"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid Background="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}">
+    <Grid Background="#FFF18B25">
         <TextBox x:Name="txtname" HorizontalAlignment="Left" Height="23" Margin="143,107,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Label Content="Name:" HorizontalAlignment="Left" Margin="78,103,0,0" VerticalAlignment="Top" Width="89" Foreground="#FF6E4408" FontWeight="Bold"/>
         <TextBox x:Name="txtaddress" HorizontalAlignment="Left" Height="23" Margin="143,173,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
@@ -14,8 +14,7 @@
         <TextBox x:Name="txtzipcode" HorizontalAlignment="Left" Height="23" Margin="143,249,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Label Content="Zipcode:" HorizontalAlignment="Left" Margin="78,245,0,0" VerticalAlignment="Top" Width="89" Foreground="#FF875916" FontWeight="Bold"/>
         <Button x:Name="btnapplication" Content="Submit Application" HorizontalAlignment="Left" Margin="78,338,0,0" VerticalAlignment="Top" Width="114" Height="44" Click="btnapplication_Click"/>
-        <ListBox x:Name="listbox" Margin="445,103,0,0" SelectionChanged="listbox_SelectionChanged"/>
+        <ListBox x:Name="listbox" Margin="465,103,0,0" SelectionChanged="listbox_SelectionChanged" Height="261" VerticalAlignment="Top" HorizontalAlignment="Left" Width="301"/>
         <Label Content="Entry Form" HorizontalAlignment="Left" Margin="337,10,0,0" VerticalAlignment="Top" Width="126" Height="43" FontSize="22" FontWeight="Bold"/>
-        <Button x:Name="addbtn" Content="Submit Another Application" HorizontalAlignment="Left" Margin="245,338,0,0" VerticalAlignment="Top" Width="111" Height="44" Click="addbtn_Click"/>
     </Grid>
 </Window>

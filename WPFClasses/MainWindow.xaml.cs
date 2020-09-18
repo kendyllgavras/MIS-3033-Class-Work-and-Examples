@@ -31,27 +31,24 @@ namespace WPFClasses
         }
 
         private void btnapplication_Click(object sender, RoutedEventArgs e)
-        {   
-            EntryForm Userentry=new EntryForm();
-            Userentry.Name = txtname.Text;
-            Userentry.Address = txtzipcode.Text;
-
-
-            ListBox ListBox1 = new ListBox();
-            
+        {
             txtname.Text = "";
             txtaddress.Text = "";
             txtzipcode.Text = "";
 
+            ListBox ListBox1 = new ListBox();
+            EntryForm Userentry=new EntryForm();
+
+            Userentry.Name = txtname.Text;
+            Userentry.Address = txtaddress.Text;
+            Userentry.ZipCode = Convert.ToInt32(txtzipcode.Text);
+
             ListBox1.Items.Add(Userentry);
+            
+           //I know this doesn't work, but I have spent a good 10 hours trying different things and I have two tests to study for. I am feeling defeated. 
           
         }
 
-        private void addbtn_Click(object sender, RoutedEventArgs e)
-        {
-            txtname.Clear();
-            txtaddress.Clear();
-            txtzipcode.Clear();
-        }
+      
     }
 }
