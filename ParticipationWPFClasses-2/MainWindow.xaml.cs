@@ -33,6 +33,17 @@ namespace ParticipationWPFClasses_2
         private void Button_Click(object sender, RoutedEventArgs e)
         {
 
+            if (txtbxtoy.Text=="" || txtbxmanufacturer.Text=="")
+            {
+                MessageBox.Show("the manufacturer or toy you have entered is invalid");
+            }
+
+            bool success = double.TryParse(txtbxprice.Text, out double number);
+            if (success==false)
+            {
+                MessageBox.Show("Invalid price");
+            }
+
             Toy Toy1 = new Toy();
             Toy1.Name = txtbxtoy.Text;
             Toy1.Manufacturer = txtbxmanufacturer.Text;
