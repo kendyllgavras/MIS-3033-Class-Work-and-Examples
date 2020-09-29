@@ -29,6 +29,7 @@ namespace PokemonParticipation
             PokemonAPI pokemonAPIResults;
             string apiURL = @"https://pokeapi.co/api/v2/pokemon?limit=0&offset=1100";
 
+            //using is too complex so we have to convert it to json so it can be read
             using (var client=new HttpClient())
             {
                 string jsonresults = client.GetStringAsync(apiURL).Result;
