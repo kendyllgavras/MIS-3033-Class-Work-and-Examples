@@ -18,6 +18,7 @@ namespace PokemonParticipation
         public string name { get; set; }
         public string url { get; set; }
 
+
         public override string ToString()
         {
             return name;
@@ -26,12 +27,11 @@ namespace PokemonParticipation
 
     public class PokemonSprite
     {
-        public int Height { get; set; }
-        public int Weight { get; set; }
+        public int height { get; set; }
+        public int weight { get; set; }
+        public string front_default { get; set; }
+        public string back_default { get; set; }
     }
 
-    public class sprite
-    {
-        //info on one pokemon
-    }
+
 }

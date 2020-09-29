@@ -7,6 +7,10 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <ComboBox x:Name="cbocharacters" HorizontalAlignment="Left" Margin="39,87,0,0" VerticalAlignment="Top" Width="225" Height="23"/>
+        <ComboBox x:Name="cbocharacters" HorizontalAlignment="Left" Margin="39,87,0,0" VerticalAlignment="Top" Width="225" Height="23" SelectionChanged="cbocharacters_SelectionChanged"/>
+        <Image x:Name="imgpokemon" HorizontalAlignment="Left" Height="155" Margin="366,130,0,0" VerticalAlignment="Top" Width="159"/>
+        <RadioButton x:Name="rdoback" Content="RadioButton" HorizontalAlignment="Left" Margin="396,334,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked"/>
+        <RadioButton x:Name="rdofront" Content="RadioButton" HorizontalAlignment="Left" Margin="396,374,0,0" VerticalAlignment="Top" Checked="rdofront_Checked"/>
+        <ListBox x:Name="lstbx1" HorizontalAlignment="Left" Height="100" Margin="91,250,0,0" VerticalAlignment="Top" Width="100"/>
     </Grid>
 </Window>
