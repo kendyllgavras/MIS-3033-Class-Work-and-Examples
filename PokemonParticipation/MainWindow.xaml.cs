@@ -27,7 +27,7 @@ namespace PokemonParticipation
             InitializeComponent();
 
             PokemonAPI pokemonAPIResults;
-            string apiURL = @"https://pokeapi.co/api/v2/pokemon?limit=0&offset=1100";
+            string apiURL = @"https://pokeapi.co/api/v2/pokemon?limit=1100&offset=0";
 
             //using is too complex so we have to convert it to json so it can be read
             using (var client=new HttpClient())
