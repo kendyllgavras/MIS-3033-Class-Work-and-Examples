@@ -34,24 +34,19 @@ namespace PokemonParticipation
             {
                 string jsonresults = client.GetStringAsync(apiURL).Result;
                 pokemonAPIResults = JsonConvert.DeserializeObject<PokemonAPI>(jsonresults);
+
             }
 
             foreach (var character in pokemonAPIResults.results)
             {
                 lstbx1.Items.Add(character);
-               
             }
 
-
         }
-
-        private void cbocharacters_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void lstbx1_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             // save selected item as variable so we can find url
-            var selection = (AllResults)cbocharacters.SelectedItem;
-
-           
-            
+            var selection = (AllResults)lstbx1.SelectedItem;
         }
 
         private void RadioButton_Checked(object sender, RoutedEventArgs e)
@@ -64,6 +59,11 @@ namespace PokemonParticipation
         {
             string pokemonfront = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/front/132.png";
             imgpokemon.Source = new BitmapImage(new Uri(pokemonfront));
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show($"Height: {Height}");
         }
     }
 }
