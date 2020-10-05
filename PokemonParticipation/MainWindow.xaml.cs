@@ -47,6 +47,12 @@ namespace PokemonParticipation
         {
             // save selected item as variable so we can find url
             var selection = (AllResults)lstbx1.SelectedItem;
+
+
+  //          lblsprite.Content = $"Height: {Height} /n Weight:{weight}";
+
+
+
         }
 
         private void RadioButton_Checked(object sender, RoutedEventArgs e)
@@ -61,9 +67,6 @@ namespace PokemonParticipation
             imgpokemon.Source = new BitmapImage(new Uri(pokemonfront));
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show($"Height: {Height}");
-        }
+
     }
 }
