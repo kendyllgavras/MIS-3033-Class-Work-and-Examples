@@ -25,10 +25,22 @@ namespace PokemonParticipation
         }
     }
 
-    public class PokemonSprite
+    public class PokemonInfo
     {
-        public int height { get; set; }
-        public int weight { get; set; }
+        public double height { get; set; }
+        public double weight { get; set; }
+        public double id { get; set; }
+
+        public override string ToString()
+        {
+            string sentence = $"height: {height}  weight: {weight}";
+            return sentence;
+        }
+    }
+
+
+    public class Sprite
+    {
         public string front_default { get; set; }
         public string back_default { get; set; }
     }

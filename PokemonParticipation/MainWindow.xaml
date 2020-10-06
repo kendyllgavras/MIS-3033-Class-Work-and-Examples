@@ -8,9 +8,9 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Image x:Name="imgpokemon" HorizontalAlignment="Left" Height="222" Margin="366,63,0,0" VerticalAlignment="Top" Width="232"/>
-        <RadioButton x:Name="rdoback" Content="RadioButton" HorizontalAlignment="Left" Margin="396,334,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked"/>
-        <RadioButton x:Name="rdofront" Content="RadioButton" HorizontalAlignment="Left" Margin="396,374,0,0" VerticalAlignment="Top" Checked="rdofront_Checked"/>
+        <RadioButton x:Name="rdoback" Content="RadioButton" HorizontalAlignment="Left" Margin="396,334,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="rdofront" Content="RadioButton" HorizontalAlignment="Left" Margin="396,374,0,0" VerticalAlignment="Top"/>
         <ListBox x:Name="lstbx1" HorizontalAlignment="Left" Height="210" Margin="31,96,0,0" VerticalAlignment="Top" Width="213" SelectionChanged="lstbx1_SelectionChanged"/>
-        <Label x:Name="lblsprite" Content="" HorizontalAlignment="Left" Margin="647,146,0,0" VerticalAlignment="Top" Width="119" Height="59"/>
+        <TextBox x:Name="txtbxinfo" HorizontalAlignment="Left" Height="38" Margin="620,189,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="162"/>
     </Grid>
 </Window>

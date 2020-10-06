@@ -45,28 +45,30 @@ namespace PokemonParticipation
         }
         private void lstbx1_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            // save selected item as variable so we can find url
-            var selection = (AllResults)lstbx1.SelectedItem;
+            var selectedPokie = (AllResults)lstbx1.SelectedItem;
+            string infoseturl = @"https://pokeapi.co/api/v2/pokemon/" + selectedPokie;
 
+            PokemonInfo pokieinfo;
+            using (var client = new HttpClient())
+            {
+                string json = client.GetStringAsync(infoseturl).Result;
+                pokieinfo = JsonConvert.DeserializeObject<PokemonInfo>(json);
+            }
 
-  //          lblsprite.Content = $"Height: {Height} /n Weight:{weight}";
+            txtbxinfo.Text = pokieinfo.ToString();
 
+            Sprite sprite = new Sprite();
+            sprite.front_default = @"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" + pokieinfo.id + ".png";
+            sprite.back_default = @"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" + pokieinfo.id + ".png";
 
-
+            if (rdofront.IsChecked==true)
+            {
+            imgpokemon.Source = new BitmapImage(new Uri(sprite.front_default));
+            }
+            if (rdoback.IsChecked==true)
+            {
+                imgpokemon.Source = new BitmapImage(new Uri(sprite.back_default));
+            }
         }
-
-        private void RadioButton_Checked(object sender, RoutedEventArgs e)
-        {
-            string pokemonback = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/132.png";
-             imgpokemon.Source = new BitmapImage(new Uri(pokemonback));
-        }
-
-        private void rdofront_Checked(object sender, RoutedEventArgs e)
-        {
-            string pokemonfront = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/front/132.png";
-            imgpokemon.Source = new BitmapImage(new Uri(pokemonfront));
-        }
-
-
     }
 }
