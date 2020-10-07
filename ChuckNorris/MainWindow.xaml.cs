@@ -57,7 +57,9 @@ namespace ChuckNorris
             {
                 using (var client=new HttpClient())
                 {
-
+                    string jsonresults = client.GetStringAsync(catapi).Result;
+                    jsonresults = client.GetStringAsync(@"https://api.chucknorris.io/jokes/random?category=" + selectedcategory).Result;
+                    txtbxquote.Text = Convert.ToString(QuoteSelected.value);
                 }
             }
         }

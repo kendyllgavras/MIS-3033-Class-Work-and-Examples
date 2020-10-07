@@ -9,6 +9,12 @@ namespace ChuckNorris
     class categories
     {
 
-        public string value;
+
+
+    }
+    public class QuoteSelected
+    {
+        string quote { get; set; }
+
     }
 }
