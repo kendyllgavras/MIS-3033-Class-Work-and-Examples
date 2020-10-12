@@ -9,12 +9,18 @@ namespace ChuckNorris
     class categories
     {
 
+   
+   
+        public string value { get; set; }
+        public string url { get; set; }
 
+
+
+        public override string ToString()
+        {
+            return value;
+        }
 
     }
-    public class QuoteSelected
-    {
-        string quote { get; set; }
 
-    }
 }

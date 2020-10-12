@@ -49,6 +49,7 @@ namespace ChuckNorris
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            categories chosencategory = new categories();
             string selectedcategory = cbocategory.SelectedItem.ToString();
             string allapiuril= @"https://api.chucknorris.io/jokes/random";
             string catapi = @"https://api.chucknorris.io/jokes/random?category=" + selectedcategory;
@@ -57,9 +58,18 @@ namespace ChuckNorris
             {
                 using (var client=new HttpClient())
                 {
-                    string jsonresults = client.GetStringAsync(catapi).Result;
-                    jsonresults = client.GetStringAsync(@"https://api.chucknorris.io/jokes/random?category=" + selectedcategory).Result;
-                    txtbxquote.Text = Convert.ToString(QuoteSelected.value);
+                    string jsonresults = client.GetStringAsync(allapiuril).Result;
+                    categories quote = JsonConvert.DeserializeObject<categories>(jsonresults);
+                    txtbxquote.Text = Convert.ToString(quote.value);
+                }
+            }
+            else
+            {
+                using (var client = new HttpClient())
+                {
+                    string Result = client.GetStringAsync(catapi).Result;
+                    categories randomquote = JsonConvert.DeserializeObject<categories>(Result);
+                    txtbxquote.Text = Convert.ToString(randomquote.value);
                 }
             }
         }

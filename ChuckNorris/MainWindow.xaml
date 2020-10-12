@@ -7,9 +7,13 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <ComboBox x:Name="cbocategory" HorizontalAlignment="Left" Margin="62,118,0,0" VerticalAlignment="Top" Width="120"/>
+        <Grid.Background>
+            <ImageBrush ImageSource="chucknorris.jpg"/>
+        </Grid.Background>
+        <ComboBox x:Name="cbocategory" HorizontalAlignment="Left" Margin="63,162,0,0" VerticalAlignment="Top" Width="120"/>
         <Button x:Name="btnchange" Content="Button" HorizontalAlignment="Left" Margin="253,339,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
         <TextBox x:Name="txtbxquote" HorizontalAlignment="Left" Height="107" Margin="388,126,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="351"/>
+        <Label Content="Chuck Norris Quote" HorizontalAlignment="Left" Margin="27,33,0,0" VerticalAlignment="Top" Width="199" Height="46" FontSize="20"/>
 
     </Grid>
 </Window>
