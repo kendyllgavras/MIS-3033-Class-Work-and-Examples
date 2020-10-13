@@ -22,6 +22,16 @@ namespace Classes3
         public StudentInfo()
         {
             InitializeComponent();
+
         }
+
+
+        public string Diplay()
+        {
+            
+        }
+
+
+
     }
 }

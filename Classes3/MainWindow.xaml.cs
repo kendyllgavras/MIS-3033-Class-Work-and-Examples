@@ -27,7 +27,7 @@ namespace Classes3
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Address Address1 = new Address();
+            
             Student Student1 = new Student();
             Student1.FirstName = txtbxfirstname.Text;
             Student1.LastName = txtbxlastname.Text;
