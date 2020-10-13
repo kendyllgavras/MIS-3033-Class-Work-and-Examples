@@ -26,8 +26,14 @@ namespace Classes3
         }
 
 
-        public string Diplay()
+        public void PopUpWindow (Student stud)
         {
+            string showinformation = $"{stud.FirstName} {stud.LastName}";
+            lblstudentinfo.Content = showinformation;
+
+            string showaddress = $"{stud.Address}";
+            lbladdress.Content = showaddress;
+
             
         }
 

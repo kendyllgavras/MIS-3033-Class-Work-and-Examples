@@ -42,6 +42,7 @@ namespace Classes3
         private void lstbxstudents_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             StudentInfo newstudentinfo = new StudentInfo();
+            lstbxstudents.SelectedItem 
         }
     }
 }

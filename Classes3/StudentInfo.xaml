@@ -7,6 +7,8 @@
         mc:Ignorable="d"
         Title="StudentInfo" Height="450" Width="800">
     <Grid>
-        
+        <Label x:Name="lblstudentinfo" Content="" HorizontalAlignment="Left" Margin="143,102,0,0" VerticalAlignment="Top" Height="95" Width="523"/>
+        <Label x:Name="lbladdress" Content="" HorizontalAlignment="Left" Margin="248,212,0,0" VerticalAlignment="Top" Height="69" Width="319"/>
+
     </Grid>
 </Window>
