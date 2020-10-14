@@ -69,7 +69,7 @@ namespace Classes3
 
         public override string ToString()
         {
-            string showinlistbox = ($"{FirstName} {LastName}, {Major}, {CalculateDistinction()}");
+            string showinlistbox = ($"{FirstName} {LastName}, {Major} {CalculateDistinction()}");
             return showinlistbox;
         }
 

@@ -37,12 +37,29 @@ namespace Classes3
 
             lstbxstudents.Items.Add(Student1);
 
+            txtbxfirstname.Clear();
+            txtbxlastname.Clear();
+            txtbxmajor.Clear();
+            txtbxgpa.Clear();
+            txtstreetname.Clear();
+            txtbxstreetnum.Clear();
+            txtbxcity.Clear();
+            txtbxstate.Clear();
+            txtbxzipcode.Clear();
+            
+
+
+
         }
 
         private void lstbxstudents_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
+            var selectedstudent = (Student)lstbxstudents.SelectedItem;
             StudentInfo newstudentinfo = new StudentInfo();
-            lstbxstudents.SelectedItem 
+
+
+            newstudentinfo.PopUpWindow(selectedstudent);
+            newstudentinfo.ShowDialog();
         }
     }
 }
