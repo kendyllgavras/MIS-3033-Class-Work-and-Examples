@@ -34,10 +34,7 @@ namespace Classes3
             string showaddress = $"{stud.Address}";
             lbladdress.Content = showaddress;
 
-            //public override string ToString()
-            //{
-            //return 
-            //}
+           
     }
 
 

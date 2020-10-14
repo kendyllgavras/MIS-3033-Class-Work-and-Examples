@@ -35,5 +35,11 @@ namespace Classes3
 			City = city;
 			ZipCode = zipcode;
 		}
+
+		public override string ToString()
+		{
+			return $"{StreetNumber} {StreetName} {City}, {State} {ZipCode}";
+		}
+
 	}
 }
